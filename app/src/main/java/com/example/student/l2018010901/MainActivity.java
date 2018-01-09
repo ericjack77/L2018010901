@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Toast;
 
@@ -17,8 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        menu.add(0,1,0,"Add");
-        menu.add(0,2,0,"Edit");
+        getMenuInflater().inflate(R.menu.mymenu,menu);
 
         return super.onCreateOptionsMenu(menu);
     }
@@ -27,9 +27,9 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId())
         {
-            case 1:
+            case R.id.menu_add:
                 Toast.makeText(this, "按下ADD", Toast.LENGTH_SHORT).show();
-            case 2:
+            case R.id.menu_edit:
                 Toast.makeText(this, "按下Edit", Toast.LENGTH_SHORT).show();
 
         }
