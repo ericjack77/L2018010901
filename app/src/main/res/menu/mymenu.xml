@@ -4,8 +4,12 @@
 
     <item
         android:id="@+id/menu_add"
-        android:title="ADD" />
+        android:icon="@android:drawable/ic_menu_add"
+        android:title="ADD"
+        app:showAsAction="always" />
     <item
         android:id="@+id/menu_edit"
-        android:title="Edit" />
+        android:icon="@android:drawable/ic_menu_edit"
+        android:title="Edit"
+        app:showAsAction="always" />
 </menu>
